@@ -1,0 +1,147 @@
+:root {
+    --bgcolor: #231F20;
+    --textcolor: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* background-image: url(../images/shape.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
+
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+    overflow-x: hidden;
+
+}
+
+
+
+.preloader {
+    /*
+    background-image: url(../images/shape.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.logo {
+    width: 250px;
+}
+
+
+.loading-bg {
+    height: 2367.88px;
+    width: 3780px;
+    left: 603.156005859375px;
+    position: absolute;
+    top: -20%;
+    left: -30%;
+    z-index: 0;
+}
+
+
+.container{
+    width: max-content;
+    /* z-index: 999; */
+}
+
+.contact {
+    background-image: url(../images/shape.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+/* contact */
+.contact h2 {
+    font-weight: 500;
+    font-size: 64px;
+}
+
+.contact .input-box {
+    width: 100%;
+    height: 74px;
+    border: none;
+    background: #171516;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+.contact .input-box-massage{
+    width: 100%;
+    height: 244px;
+    border: none;
+    background: #171516;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+.contact .btn-box{
+    display: contents;
+}
+.btn-send{
+    width: 296px;
+    font-size: 24px;
+    height: 74px;
+    background: #FFCE07;
+    border-radius: 16px;
+    border: none;
+}
+/* icons */
+/* .icons-box{
+    z-index: -99;
+} */
+.contact .figma-icon{
+    left: 68rem;
+    top: 32rem;
+}
+.contact .python-icon{
+    left: 2rem;
+    top: 23rem;
+}
+.contact .css-icon{
+    left: 5rem;
+    top: 28rem;
+}
+.contact .Laptop-icon{
+    left: 67rem;
+    top: 8rem;
+}
+
+/* @media (max-width:1399.98px) {}
+@media (max-width:1199.98px){}
+@media(max-width:991.98px) {}
+@media(max-width:767.98px) {}
+@media (max-width:575.98px){} */
+
+@media(max-width:991.98px) {
+    .container .title{
+        text-align: center;
+    }
+    .container .title h2{
+        font-size: 30px;
+    }   
+}
