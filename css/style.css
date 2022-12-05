@@ -15,25 +15,82 @@ img {
 
 body {
     font-family: 'Inter', sans-serif;
-    /* background-image: url(../images/shape.svg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover; */
-
     background-color: var(--bgcolor);
     color: var(--textcolor);
     overflow-x: hidden;
-
+    /* background-image: url(../images/shape.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 110% , 110%; */
 }
+/* cursor */
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid #FFCE07;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid #FFCE07;
+}
+
+/* reload */
 
 
 
 .preloader {
-    /*
-    background-image: url(../images/shape.svg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;*/
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,39 +118,75 @@ body {
     left: -30%;
     z-index: 0;
 }
-
-
-.container{
-    width: max-content;
-    /* z-index: 999; */
+/* product */
+.wrapper{
+    /* margin-bottom: 50px; */
+    display: flex;
+    flex-wrap: nowrap;
 }
+.section{
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+
+}
+.section1{
+    background-image: url(../images/web1.png);
+}
+.section2{
+    background-image: url(../images/landing.png);
+}
+.section3{
+    background-image: url(../images/uiux.png);
+}
+.section4{
+    background-image: url(../images/mobile.png);
+}
+.title-ser{
+    font-size: 32px;
+}
+.wrapper h1{
+    font-size: 80px;
+}
+.wrapper .text-list h4{
+    font-size: 40px;
+}
+.wrapper .number-box{
+    background-color: transparent;
+    padding: 13% 18%;
+    font-weight: 800;
+    border: 2px solid;
+    border-radius: 66%;
+}
+
+/* contact */
 
 .contact {
     background-image: url(../images/shape.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 110% , 110%;
     width: 100%;
     height: auto;
 }
 
-/* contact */
+
 .contact h2 {
     font-weight: 500;
-    font-size: 64px;
+    font-size: 40px;
 }
 
 .contact .input-box {
-    width: 100%;
-    height: 74px;
+    width: 440px;
+    height: 40px;
     border: none;
     background: #171516;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 16px;
 }
 .contact .input-box-massage{
-    width: 100%;
-    height: 244px;
+    width: 1006px;
+    height: 96px;
     border: none;
     background: #171516;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -103,32 +196,30 @@ body {
     display: contents;
 }
 .btn-send{
-    width: 296px;
+    width: 280px;
     font-size: 24px;
-    height: 74px;
+    height: 70px;
     background: #FFCE07;
     border-radius: 16px;
     border: none;
 }
 /* icons */
-/* .icons-box{
-    z-index: -99;
-} */
+
 .contact .figma-icon{
     left: 68rem;
-    top: 32rem;
-}
-.contact .python-icon{
-    left: 2rem;
-    top: 23rem;
-}
-.contact .css-icon{
-    left: 5rem;
     top: 28rem;
 }
+.contact .python-icon{
+    left: 0rem;
+    top: 17rem;
+}
+.contact .css-icon{
+    left: 1rem;
+    top: 23rem;
+}
 .contact .Laptop-icon{
-    left: 67rem;
-    top: 8rem;
+    left: 65rem;
+    top: 3rem;
 }
 
 /* @media (max-width:1399.98px) {}
@@ -143,5 +234,8 @@ body {
     }
     .container .title h2{
         font-size: 30px;
+    }
+    .icons-box{
+        display: none;
     }   
 }
